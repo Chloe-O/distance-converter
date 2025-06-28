@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Distance Converter</title>
-    <link rel="stylesheet" href="/stlye.css" type="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="distance-converter">
+      <div class="wrapper">
+        <h2>Distance Converter</h2>
+       <form action="" class="convert-to">
+        <label for="unit-amount">Unit Amount</label>
+        <input name="unit-amount" type="number">
+        <label for="unit">Unit</label>
+        <select name="unit" id="unit-from">
+            <option value="km">km</option>
+            <option value="mile">miles</option>
+            <option value="metre">metres</option>
+            <option value="yard">yards</option>
+            <option value="inch">inches</option>
+        </select>
+       </form>
+       <form action="" class="convert-to">
+        <label for="unit-amount">Unit Amount</label>
+        <input type="number" name="unit-amount">
+        <label for="unit">Unit</label>
+        <select name="unit" id="unit-to">
+            <option value="km">km</option>
+            <option value="mile">miles</option>
+            <option value="metre">metres</option>
+            <option value="yard">yards</option>
+            <option value="inch">inches</option>
+        </select>
+       </form>
+      </div>
+    </section>
     <script src="/app.js"></script>
-</body>
+  </body>
 </html>
