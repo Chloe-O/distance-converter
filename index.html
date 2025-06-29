@@ -7,33 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="distance-converter">
+    <section id="distanceConverter">
       <div class="wrapper">
-        <h2>Distance Converter</h2>
+        <h2>Kilometres to Miles Converter</h2>
        <form action="" class="convert-to">
-        <label for="unit-amount">Unit Amount</label>
-        <input name="unit-amount" type="number">
-        <label for="unit">Unit</label>
-        <select name="unit" id="unit-from">
-            <option value="km">km</option>
-            <option value="mile">miles</option>
-            <option value="metre">metres</option>
-            <option value="yard">yards</option>
-            <option value="inch">inches</option>
-        </select>
+        <input name="kilometres-input" id="KmInput" type="number">
+         <label for="kilometres-input">km</label>
        </form>
-       <form action="" class="convert-to">
-        <label for="unit-amount">Unit Amount</label>
-        <input type="number" name="unit-amount">
-        <label for="unit">Unit</label>
-        <select name="unit" id="unit-to">
-            <option value="km">km</option>
-            <option value="mile">miles</option>
-            <option value="metre">metres</option>
-            <option value="yard">yards</option>
-            <option value="inch">inches</option>
-        </select>
-       </form>
+       <button id="convertBtn">Convert</button>
+       <div id="output">
+
+       </div>
       </div>
     </section>
     <script src="/app.js"></script>
