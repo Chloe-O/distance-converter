@@ -6,29 +6,37 @@ const displayMileOutput = document.getElementById("displayMOutput");
 
 const modal = document.getElementById("modal");
 const closeModalBtn = document.getElementById("closeModalBtn");
+const modalText = document.getElementById("modalText");
 
 function closeModal() {
-    modal.style.display = 'none';
+  modal.style.display = "none";
 }
 
-closeModalBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', closeModal)
+function openModal() {
+  modal.style.display = "flex";
+  modalText.innerText =
+    "You left the input field empty, enter a number to convert it to miles";
+}
+
+closeModalBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", closeModal);
 
 function checkInputField() {
   if (KmInput.value.length === 0 || KmInput.value <= 0) {
-    console.log("You left the field empty, add a number to convert to miles");
+    openModal;
   } else {
     console.log(KmInput.value);
   }
 }
 
-convertBtn.addEventListener("click", () => {
-  checkInputField();
-  kmToMiles(KmInput.value);
-  KmInput.value = "";
-});
-
-const kmToMiles = (x) => {
-    console.log(x * 1.609);
-
+function kmToMiles(x) {
+  let mileVal = (x / 1.609).toFixed(2);
+  displayMileOutput.innerHTML = mileVal;
 }
+
+convertBtn.addEventListener("click", () => {
+  checkInputField;
+//   kmToMiles(KmInput.value);
+//   displayKmInput.innerHTML = KmInput.value;
+//   KmInput.value = "";
+});
