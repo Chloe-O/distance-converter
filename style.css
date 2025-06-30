@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,17 +13,21 @@ html {
 body {
   height: 100%;
   background: #d7d7d7;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 #distanceConverter {
   padding: 20px;
-  border-radius: 50px;
+  border-radius: 30px;
   background: linear-gradient(130deg, #5d67d3, #9fa5e3);
   max-width: 90%;
   margin: 40px auto;
 }
 #distanceConverter .wrapper {
   padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 #distanceConverter .wrapper h2 {
   text-align: center;
@@ -33,7 +38,29 @@ body {
   margin: 0 0 40px 0;
   color: #222;
 }
-
+#distanceConverter .wrapper form #KmInput {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+#distanceConverter .wrapper form .km-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+#distanceConverter .wrapper #convertBtn {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+#distanceConverter .wrapper #output {
+  text-align: center;
+  font-size: 14px;
+}
 #modal {
   position: fixed;
   display: flex;
@@ -45,6 +72,7 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   transition: 0.3s;
+  display: none;
 }
 #modal .modal-content {
   position: relative;
