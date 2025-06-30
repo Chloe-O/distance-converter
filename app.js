@@ -1,7 +1,14 @@
 const KmInput = document.getElementById("KmInput");
 const convertBtn = document.getElementById("convertBtn");
 
-const distanceConverter = document.getElementById("distanceConverter");
+const modal = document.getElementById("modal");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+closeModalBtn.addEventListener('click', closeModal);
 
 convertBtn.addEventListener("click", () => {
   checkInputField();
@@ -15,3 +22,5 @@ function checkInputField() {
     console.log(KmInput.value);
   }
 }
+
+

@@ -44,6 +44,7 @@ body {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
 }
 #modal .modal-content {
   position: relative;
@@ -57,7 +58,7 @@ body {
   line-height: 1.2;
   font-size: 18px;
 }
-#modal .modal-content .close-modal {
+#modal .modal-content #closeModalBtn {
   position: absolute;
   top: 15px;
   right: 20px;
