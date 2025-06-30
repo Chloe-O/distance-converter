@@ -11,7 +11,7 @@ html {
 
 body {
   height: 100%;
-  background: #f0f0f0;
+  background: #d7d7d7;
 }
 
 #distanceConverter {
@@ -27,11 +27,44 @@ body {
     h2 {
       text-align: center;
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: 25px;
       line-height: 1.1;
       padding: 0;
       margin: 0 0 40px 0;
       color: #222;
+    }
+  }
+}
+
+#modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(#000, 0.8);
+
+  .modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    padding: 50px 20px 40px 20px;
+    margin: 20px;
+
+    p {
+      text-align: center;
+      line-height: 1.2;
+      font-size: 18px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
     }
   }
 }

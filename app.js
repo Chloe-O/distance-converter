@@ -5,6 +5,7 @@ const distanceConverter = document.getElementById("distanceConverter");
 
 convertBtn.addEventListener("click", () => {
   checkInputField();
+  KmInput.value = "";
 });
 
 function checkInputField() {
