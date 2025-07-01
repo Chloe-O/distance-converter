@@ -15,19 +15,11 @@ function closeModal() {
 function openModal() {
   modal.style.display = "flex";
   modalText.innerText =
-    "You left the input field empty, enter a number to convert it to miles";
+    "The input field is empty, enter a number to convert it to miles";
 }
 
 closeModalBtn.addEventListener("click", closeModal);
 modal.addEventListener("click", closeModal);
-
-function checkInputField() {
-  if (KmInput.value.length === 0 || KmInput.value <= 0) {
-    openModal;
-  } else {
-    console.log(KmInput.value);
-  }
-}
 
 function kmToMiles(x) {
   let mileVal = (x / 1.609).toFixed(2);
@@ -35,8 +27,11 @@ function kmToMiles(x) {
 }
 
 convertBtn.addEventListener("click", () => {
-  checkInputField;
-//   kmToMiles(KmInput.value);
-//   displayKmInput.innerHTML = KmInput.value;
-//   KmInput.value = "";
+  if (KmInput.value.length === 0 || KmInput.value <= 0) {
+    openModal();
+  } else {
+    kmToMiles(KmInput.value);
+    displayKmInput.innerHTML = KmInput.value;
+    KmInput.value = "";
+  }
 });
